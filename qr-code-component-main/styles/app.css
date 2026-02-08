@@ -1,3 +1,21 @@
+/* CSS variables */
+
+
+:root {
+    --primary-color: hsl(220, 15%, 55%);
+    --secondary-color: hsl(0, 0%, 100%);
+    --background-color: hsl(0, 0%, 90%);
+    --text-color: hsl(220, 15%, 20%);
+    --card-background: hsl(0, 0%, 100%);
+    --card-shadow: rgba(0, 0, 0, 0.1);
+    --font-size-p: 15px;
+    --White: hsl(0, 0%, 100%);
+    --Slate-300: hsl(212, 45%, 89%);
+    --Slate-500: hsl(216, 15%, 48%);
+    --Slate-900: hsl(218, 44%, 22%);
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -7,22 +25,41 @@
 html, body {
     height: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #cdcdcd;
+    background-color: var(--background-color);
+    justify-content: center;
+    align-items: center;
+}
+
+body p {
+    padding: 30px 30px 0px 30px;
+    text-align: center;
+}
+
+
+
+.attribution {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+    justify-self: center;
+    top: 20px;
 }
 
 .QRcontainer {
+    margin-top: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60%;
+    height: 100%;
 }
 
 .QR-Card {
-    background: #fff;
+    background: var(--card-background);
     margin: 50px;
     padding: 20px; 
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px var(--card-shadow);
     max-width: 450px;
     text-align: center;
 
@@ -31,7 +68,26 @@ html, body {
 .QRImage {
     width: 100%;
     height: auto;
-    border-radius: 15px;
-    margin: 20px 0 10px 0;
+    border-radius: 20px;
     padding: 10px;
+    size: 200px 200px;
+}
+
+.card-info {
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.card-info h1 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+.card-info p {
+    font-size: var(--font-size-p);
+    color: var(--Slate-500);
+    line-height: 1.5;
+    padding-top: 10px
 }
